@@ -25,7 +25,7 @@ const studySpots: StudySpot[] = [
     hours: '8:30am–5pm',
     type: 'Quiet',
     description: 'Perfect for focused study sessions with extensive legal resources',
-    imageUrl: 'https://images.unsplash.com/photo-1737018363337-c11847e9f39b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsaWJyYXJ5JTIwc3R1ZHklMjBxdWlldHxlbnwxfHx8fDE3NjI4MTY5NjN8MA&ixlib=rb-4.1.0&q=80&w=1080'
+    imageUrl: 'https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/481223803_1192374752896037_3060902548988372729_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=3u8_I1O27m8Q7kNvwFxJidz&_nc_oc=AdmvmwS2QT3eE4IJftx6vLIro87Rrfto_LPlbzcB1FPG3s-2MxdzGbzvB1RwM0nMeuI&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=a-3fz7sU6B3r4aBrWrHU_w&oh=00_AfhWOnJYKFVVRkFUU1pOYwyyZwgbUKeErKQFzONTSX-I1g&oe=691ECE99'
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const studySpots: StudySpot[] = [
     hours: 'Student Center West',
     type: 'Active',
     description: 'Great for group work and collaborative studying',
-    imageUrl: 'https://images.unsplash.com/photo-1743529056611-2b7b01658893?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwbG91bmdlJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzYyODE2OTY0fDA&ixlib=rb-4.1.0&q=80&w=1080'
+    imageUrl: 'https://engagement.gsu.edu/files/2025/02/IMG_3878-1500x1125.jpeg'
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ const studySpots: StudySpot[] = [
     hours: '7am–11pm',
     type: 'Quiet',
     description: 'Great views, quiet atmosphere',
-    imageUrl: 'https://images.unsplash.com/photo-1658200542476-68e8adf747ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYW1wdXMlMjBzdHVkeSUyMHNwYWNlfGVufDF8fHx8MTc2MjgxNjk2NHww&ixlib=rb-4.1.0&q=80&w=1080'
+    imageUrl: 'https://images.squarespace-cdn.com/content/v1/5b4677d2b40b9d8a7e9b4c34/1598389656107-JOJ9KXX9203037IX0W61/IMG_3782.jpg'
   },
   {
     id: 4,
@@ -53,11 +53,11 @@ const studySpots: StudySpot[] = [
   },
   {
     id: 5,
-    name: 'Study Commons',
-    hours: 'Open until 2am',
-    type: 'Active',
-    description: 'Late-night study with coffee bar and group tables',
-    imageUrl: 'https://images.unsplash.com/photo-1514355315815-2b64b0216b14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwc3R1ZHklMjByb29tfGVufDF8fHx8MTc2MjgxNjk2NHww&ixlib=rb-4.1.0&q=80&w=1080'
+    name: 'CMII, 2nd Floor',
+    hours: '8:30am - 10pm',
+    type: 'Quiet',
+    description: 'Peaceful environment with ample seating',
+    imageUrl: 'https://cmii.gsu.edu/files/2024/07/BM5A8596-1.jpg'
   }
 ];
 
