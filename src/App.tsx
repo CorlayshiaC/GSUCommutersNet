@@ -34,7 +34,7 @@ const studySpots: StudySpot[] = [
     type: 'Quiet',
     description: 'Quiet floor ideal for silent studying',
     imageUrl: 'https://sites.gsu.edu/fall2016engl1101/files/2016/10/library-1jkf7tc.jpg'
-  }
+  },
   {
     id: 3,
     name: 'GSU Library — 5th Floor',
