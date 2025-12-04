@@ -10,39 +10,7 @@ interface StudySpotCardProps {
 
 export function StudySpotCard({ spot, favorites, toggleFavorite }: StudySpotCardProps) {
   const [expanded, setExpanded] = useState(false);
-
   const isFavorite = favorites.includes(spot.id);
-
-  const getBusyColors = (level?: string) => {
-    switch (level) {
-      case "Low":
-        return { text: "text-green-600", bar: "bg-green-500", width: "33%" };
-      case "Medium":
-        return { text: "text-yellow-600", bar: "bg-yellow-500", width: "66%" };
-      case "High":
-        return { text: "text-red-600", bar: "bg-red-500", width: "100%" };
-      default:
-        return { text: "text-gray-600", bar: "bg-gray-400", width: "50%" };
-    }
-  };
-
-  // Expanded emoji set — every amenity has something cute
-  const amenityIcons: Record<string, string> = {
-    WiFi: "📶",
-    Quiet: "🤫",
-    Food: "🍽️",
-    "Power Outlets": "🔌",
-    Seating: "🛋️",
-    Whiteboards: "📝",
-    "Window Views": "🌆",
-    "Group Tables": "🧑‍🤝‍🧑",
-    "Private Desks": "🪑",
-    "Nap Pods": "🛌",
-    "Collaborative Tables": "🤝",
-    "Digital Media": "💻",
-    "Nearby Food": "🍱",
-    Default: "✨", // fallback
-  };
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
@@ -54,10 +22,10 @@ export function StudySpotCard({ spot, favorites, toggleFavorite }: StudySpotCard
             <h2 className="text-xl font-semibold text-gray-800">{spot.name}</h2>
             <p className="text-gray-600 text-sm">{spot.description}</p>
           </div>
-          {/* Favorite Button — always yellow star */}
           <button
             onClick={() => toggleFavorite(spot.id)}
             className="ml-2 text-yellow-500 hover:text-yellow-600"
+            aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
           >
             <Star size={22} fill={isFavorite ? "currentColor" : "none"} />
           </button>
@@ -81,30 +49,36 @@ export function StudySpotCard({ spot, favorites, toggleFavorite }: StudySpotCard
             <p className="mb-2"><strong>Hours:</strong> {spot.hours}</p>
             {spot.location && <p className="mb-2"><strong>Location:</strong> {spot.location}</p>}
 
-            {/* Busy Level Indicator */}
+            {/* Busy Level (no colors, no bar) */}
             {spot.busyLevel && (
               <div className="mb-2">
-                <p className={`font-medium ${getBusyColors(spot.busyLevel).text}`}>
-                  Busy Level: {spot.busyLevel}
+                <p className="font-medium text-gray-700">
+                  Busy Level: {String(spot.busyLevel).trim()}
                 </p>
-                <div className="w-full h-2 bg-gray-200 rounded">
-                  <div
-                    className={`h-2 rounded ${getBusyColors(spot.busyLevel).bar}`}
-                    style={{ width: getBusyColors(spot.busyLevel).width }}
-                  />
-                </div>
               </div>
             )}
 
             {/* Amenities */}
-            {spot.amenities && (
+            {spot.amenities && spot.amenities.length > 0 && (
               <div className="flex flex-wrap gap-2 mt-2">
                 {spot.amenities.map((a) => (
                   <span
                     key={a}
                     className="flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full text-sm"
                   >
-                    {amenityIcons[a] || amenityIcons.Default} {a}
+                    {a === "WiFi" ? "📶" :
+                     a === "Quiet" ? "🤫" :
+                     a === "Food" ? "🍽️" :
+                     a === "Power Outlets" ? "🔌" :
+                     a === "Seating" ? "🛋️" :
+                     a === "Whiteboards" ? "📝" :
+                     a === "Window Views" ? "🌆" :
+                     a === "Group Tables" ? "🧑‍🤝‍🧑" :
+                     a === "Private Desks" ? "🪑" :
+                     a === "Nap Pods" ? "🛌" :
+                     a === "Collaborative Tables" ? "🤝" :
+                     a === "Digital Media" ? "💻" :
+                     a === "Nearby Food" ? "🍱" : "✨"} {a}
                   </span>
                 ))}
               </div>
